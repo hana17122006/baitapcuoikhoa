@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tính điểm trung bình</title>
+</head>
+<body>
+    <input id="ten-hs" type="text" placeholder="nhập tên học sinh">
+    <div>
+        <input id="diem1511" type="text" placeholder="nhập điểm thi 15 phút lần 1 học kì 1">
+        <input id="diem1521" type="text" placeholder="nhập điểm thi 15 phút lần 2 học kì 1">
+        <input id="diem1531" type="text" placeholder="nhập điểm thi 15 phút lần 3 học kì 1">
+        <input id="diem451" type="text" placeholder="nhập điểm thi 45 phút học kì 1">
+        <input id="diemck1" type="text" placeholder="nhập điểm thi cuối học kì 1">
+        <input id="hk1" type="text" placeholder="nhập hạnh kiểm học kì 1">
+    </div>
+    </br>
+    <div>
+        <input id="diem1512" type="text" placeholder="nhập điểm thi 15 phút lần 1 học kì 2">
+        <input id="diem1522" type="text" placeholder="nhập điểm thi 15 phút lần 2 học kì 2">
+        <input id="diem1532" type="text" placeholder="nhập điểm thi 15 phút lần 3 học kì 2">
+        <input id="diem452" type="text" placeholder="nhập điểm thi 45 phút học kì 2">
+        <input id="diemck2" type="text" placeholder="nhập điểm thi cuối học kì 2">
+        <input id="hk2" type="text" placeholder="nhập hạnh kiểm học kì 2">
+    </div>
+    <input id="hk" type="text" placeholder="nhập hạnh kiểm cả năm">
+    <button>Enter</button>
+    <div id="kq1">
+
+    </div>
+    <div id="kq2">
+
+    </div>
+    <div id="kq">
+
+    </div>
+    <script>
+        var a = 0;
+        var b = 0;
+        var c = 0;
+        var d = 0;
+        var e = 0;
+        var f = 0;
+        var g = 0;
+        var h = 0;
+        var i = 0;
+        var j = 0;
+        var k = 0;
+        var l = 0;
+        var m = 0;
+        function kiemtrahocsinhhk1(){
+            a = document.getElementById('diem1511').value;
+            b = document.getElementById('diem1521').value;
+            c = document.getElementById('diem1531').value;
+            d = document.getElementById('diem451').value;
+            e = document.getElementById('diemck1').value;
+            k = document.getElementById('hk1').value;
+            if((a + b + c + d * 2 + e * 3)/8 > 8 && k == "T"){
+                document.getElementById('kq1').innerHTML = "Học sinh giỏi";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 8 && k == "K"){
+                document.getElementById('kq1').innerHTML = "Học sinh khá";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 8 && k == "TB"){
+                document.getElementById('kq1').innerHTML = "Học sinh trung bình";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 8 && k == "Y"){
+                document.getElementById('kq1').innerHTML = "Học sinh yếu";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 8 && k == "Ke"){
+                document.getElementById('kq1').innerHTML = "Học sinh kém";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 6 && (a + b + c + d * 2 + e * 3)/8 < 8 && k == "T"){
+                document.getElementById('kq1').innerHTML = "Học sinh khá";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 6 && (a + b + c + d * 2 + e * 3)/8 < 8 && k == "K"){
+                document.getElementById('kq1').innerHTML = "Học sinh khá";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 6 && (a + b + c + d * 2 + e * 3)/8 < 8 && k == "TB"){
+                document.getElementById('kq1').innerHTML = "Học sinh trung bình";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 6 && (a + b + c + d * 2 + e * 3)/8 < 8 && k == "Y"){
+                document.getElementById('kq1').innerHTML = "Học sinh yếu";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 6 && (a + b + c + d * 2 + e * 3)/8 < 8 && k == "Ke"){
+                document.getElementById('kq1').innerHTML = "Học sinh kém";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 3.5 && (a + b + c + d * 2 + e * 3)/8 < 6 && k == "T"){
+                document.getElementById('kq1').innerHTML = "Học sinh trung bình";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 3.5 && (a + b + c + d * 2 + e * 3)/8 < 6 && k == "K"){
+                document.getElementById('kq1').innerHTML = "Học sinh trung bình";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 3.5 && (a + b + c + d * 2 + e * 3)/8 < 6 && k == "TB"){
+                document.getElementById('kq1').innerHTML = "Học sinh trung bình";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 3.5 && (a + b + c + d * 2 + e * 3)/8 < 6 && k == "Y"){
+                document.getElementById('kq1').innerHTML = "Học sinh yếu";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 3.5 && (a + b + c + d * 2 + e * 3)/8 < 6 && k == "Ke"){
+                document.getElementById('kq1').innerHTML = "Học sinh kém";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 2 && (a + b + c + d * 2 + e * 3)/8 < 3.5 && k == "T"){
+                document.getElementById('kq1').innerHTML = "Học sinh yếu";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 2 && (a + b + c + d * 2 + e * 3)/8 < 3.5 && k == "K"){
+                document.getElementById('kq1').innerHTML = "Học sinh yếu";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 2 && (a + b + c + d * 2 + e * 3)/8 < 3.5 && k == "TB"){
+                document.getElementById('kq1').innerHTML = "Học sinh yếu";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 2 && (a + b + c + d * 2 + e * 3)/8 < 3.5 && k == "Y"){
+                document.getElementById('kq1').innerHTML = "Học sinh yếu";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 2 && (a + b + c + d * 2 + e * 3)/8 < 3.5 && k == "Ke"){
+                document.getElementById('kq1').innerHTML = "Học sinh kém";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 0 && (a + b + c + d * 2 + e * 3)/8 < 2 && k == "T"){
+                document.getElementById('kq1').innerHTML = "Học sinh kém";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 0 && (a + b + c + d * 2 + e * 3)/8 < 2 && k == "K"){
+                document.getElementById('kq1').innerHTML = "Học sinh kém";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 0 && (a + b + c + d * 2 + e * 3)/8 < 2 && k == "TB"){
+                document.getElementById('kq1').innerHTML = "Học sinh kém";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 0 && (a + b + c + d * 2 + e * 3)/8 < 2 && k == "Y"){
+                document.getElementById('kq1').innerHTML = "Học sinh kém";
+            } else if((a + b + c + d * 2 + e * 3)/8 > 0 && (a + b + c + d * 2 + e * 3)/8 < 2 && k == "Ke"){
+                document.getElementById('kq1').innerHTML = "Học sinh kém";
+            }
+        }
+    </script>
+</body>
+</html>

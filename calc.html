@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>máy tính</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="3"><input type="text" id="" disabled></td>
+            <td><button onclick="delValue">AC</button></td>
+        </tr>
+        <tr>
+           <td onclick="showValueInput(9)">9</td>
+           <td onclick="showValueInput(8)">8</td>
+           <td onclick="showValueInput(7)">7</td>
+           <td onclick="operator('/')">/</td> 
+        </tr>
+        <tr>
+            <td onclick="showValueInput(6)">6</td>
+            <td onclick="showValueInput(5)">5</td>
+            <td onclick="showValueInput(4)">4</td>
+            <td onclick="operator('*')">*</td>
+        </tr>
+        <tr>
+            <td onclick="showValueInput(3)">3</td>
+            <td onclick="showValueInput(2)">2</td>
+            <td onclick="showValueInput(1)">1</td>
+            <td onclick="operator('-')">-</td>
+        </tr>
+        <tr>
+            <td onclick="showValueInput(0)">0</td>
+            <td onclick="showValueInput('.');hadDot = true;">.</td>
+            <td onclick="operator('+')">+</td>
+            <td onclick="calculator()">=</td>
+        </tr>
+    </table>
+    <script>
+        var number = "";
+        var number1 = "";
+        var oper = "";
+        var hadDot = false;
+        function showValueInput(val){
+            if (val == '.'){
+                if (hadDot == false){
+                    if (oper != ''){
+                        number1 += val;
+                        document.getElementById('ip-val').value = number1;
+                    } else {
+                        number += val;
+                        document.getElementById('ip-val').value = number;
+                    }
+                }
+            }
+            function delValue(){
+                number = '';
+                number1 = '';
+                oper = '';
+                hadDot = false;
+                document.getElementById('ip-val').value = '';
+            }
+            function operator(op){
+                oper = op;
+                document.getElementById('ip-val').value = '';
+            }
+            function calculator(){
+                if (oper == '+'){
+                    document.getElementById('ip-val').value = parseFloat(number) + parseFloat(number1);
+                } else if (oper == '-'){
+                    document.getElementById('ip-val').value = parseFloat(number) - parseFloat(number1);
+                }  else if (oper == '*'){
+                    document.getElementById('ip-val').value = parseFloat(number) * parseFloat(number1);
+                } else if (oper == '/'){
+                    document.getElementById('ip-val').value = parseFloat(number) / parseFloat(number1);
+                }
+                number1 = '';
+                number = '';
+                hadDot = false;
+            }
+        }
+    </script>
+</body>
+</html>

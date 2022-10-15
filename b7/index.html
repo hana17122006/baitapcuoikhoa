@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+   <input type="text" placeholder="Họ và tên" id="ip-name">
+   <input type="text" placeholder="Giới tính" id="ip-sex">
+   <input type="text" placeholder="Lớp" id="ip-class">
+   <table id="tb-1" border="1">
+    <th>
+        <td>Họ và Tên</td>
+        <td>Giới tính</td>
+        <td>Lớp</td>
+       </th>
+   </table>
+  <script>
+    function addValueInTable(){
+      let val_list = document.getElementById("ip-name").value;
+            todolist.push(val_list);
+      let val_list = document.getElementById("ip-sex").value;
+            todolist.push(val_list);
+      let val_list = document.getElementById("ip-class").value;
+            todolist.push(val_list);
+    }
+  </script>
+</body>
+</html>
